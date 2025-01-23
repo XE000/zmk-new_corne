@@ -83,7 +83,7 @@ layers:
   - <
   - '>'
   - '&'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Gui+.
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - Sft+|
   - {t: '[', s: '{'}
