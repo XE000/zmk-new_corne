@@ -50,6 +50,7 @@
             bindings = <&kp ENTER>, <&kp SEMICOLON>;
 
             label = "RTNSEMICOL";
+            tapping-term-ms = <100>;
         };
 
         SPCDOT: SPCDOT {
@@ -59,6 +60,7 @@
             bindings = <&kp SPACE>, <&kp PERIOD>;
 
             label = "SPCDOT";
+            tapping-term-ms = <100>;
         };
     };
 
