@@ -32,6 +32,7 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
 
             label = "SHIFTCAPS";
+            tapping-term-ms = <150>;
         };
 
         fwdbckslh: fwdbckslh {
@@ -41,6 +42,7 @@
             bindings = <&kp FSLH>, <&kp BSLH>;
 
             label = "FWDBCKSLH";
+            tapping-term-ms = <150>;
         };
 
         rtnsemicol: rtnsemicol {
@@ -50,7 +52,7 @@
             bindings = <&kp ENTER>, <&kp SEMICOLON>;
 
             label = "RTNSEMICOL";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
         };
 
         SPCDOT: SPCDOT {
