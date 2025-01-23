@@ -15,7 +15,7 @@ Use https://nickcoutsos.github.io/keymap-editor/ and connect your github account
 ## How to flash
 Download firmware archive in github actions workflow "Build ZMK firmware" and unzip.
 
-1. Restart one half of the keyboard to bootloader mode (either using default keybind that came with the keyboard or hold down reset button while plugging into the PC and letting go after few seconds, it may take a few tries). You will know it is in BL mode when a USB storage device shows up on your PC.
+1. Restart one half of the keyboard to bootloader mode (either using default keybind that came with the keyboard or press reset twice in 500ms. LED should be green). You will know it is in BL mode when a USB storage device shows up on your PC.
 2. Drag or copy nice_view-eyelash_corne_left-zmk.uf2 to left keyboard, or nice_view-eyelash_corne_right-zmk.uf2 for right keyboard to the USB storage device that showed up when the keyboard was connected in BL mode.
 
 ## Keymap Diagram
