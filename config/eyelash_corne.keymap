@@ -60,7 +60,7 @@
             bindings = <&kp SPACE>, <&kp PERIOD>;
 
             label = "SPCDOT";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
         };
     };
 
