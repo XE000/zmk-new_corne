@@ -96,7 +96,7 @@ layers:
   - '?'
   - ':'
   - $$mdi:apple-keyboard-shift$$
-  - KP COMMA
+  - {t: ',', s: <}
   Fn:
   - '&studio_unlock'
   - F1
