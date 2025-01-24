@@ -20,7 +20,7 @@ layers:
   - F
   - G
   - HOME
-  - Gui+$$mdi:keyboard-space$$
+  - Ctl+$$mdi:keyboard-space$$
   - END
   - H
   - J
