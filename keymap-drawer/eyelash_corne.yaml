@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - AltGr+$$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-tab$$
   - A
   - S
@@ -46,7 +46,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-space$$', h: NUMSYM}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - {t: RETURN, h: macros}
+  - {t: '$$mdi:backspace$$', h: macros}
   - $$mdi:apple-keyboard-option$$
   NUMSYM:
   - {t: '`', s: '~'}
