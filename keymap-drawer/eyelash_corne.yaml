@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - Fn
+  - AltGr+$$mdi:keyboard-tab$$
   - $$mdi:keyboard-tab$$
   - A
   - S
@@ -27,7 +27,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - macros
+  - {t: '''', s: '"'}
   - '&shiftcaps'
   - $$mdi:apple-keyboard-control$$
   - Z
@@ -43,10 +43,10 @@ layers:
   - .
   - '?'
   - LGUI
-  - NUMSYM
-  - '&SPCDOT'
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-space$$', h: NUMSYM}
+  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: RETURN, h: macros}
   - $$mdi:apple-keyboard-option$$
   NUMSYM:
   - {t: '`', s: '~'}
@@ -92,8 +92,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - {t: '''', s: '"'}
-  - {type: held}
-  - '?'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '?', type: held}
   - ':'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: ',', s: <}
@@ -110,7 +110,7 @@ layers:
   - F8
   - F9
   - F10
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -143,7 +143,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB4'
-  - '&mkp MB5'
+  - {t: '&mkp MB5', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   macros:
@@ -174,7 +174,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -193,5 +193,5 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
