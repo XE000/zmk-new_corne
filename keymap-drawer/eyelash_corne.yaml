@@ -1,7 +1,7 @@
 layers:
   QWERTY:
   - $$mdi:keyboard-esc$$
-  - Q
+  - $$mdi:keyboard-tab$$
   - W
   - E
   - R
@@ -11,9 +11,9 @@ layers:
   - U
   - I
   - O
-  - P
   - Fn
-  - $$mdi:keyboard-tab$$
+  - macros
+  - Q
   - A
   - S
   - D
@@ -26,8 +26,8 @@ layers:
   - J
   - K
   - L
+  - P
   - $$mdi:arrow-up-bold$$
-  - macros
   - $$mdi:apple-keyboard-control$$
   - '&shiftcaps'
   - Z
@@ -40,8 +40,8 @@ layers:
   - N
   - M
   - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
+  - $$mdi:arrow-down-bold$$
   - LGUI
   - NUMSYM
   - '&SPCDOT'
@@ -109,8 +109,8 @@ layers:
   - F7
   - F8
   - F9
-  - F10
-  - {t: F11, type: held}
+  - {t: F10, type: held}
+  - F11
   - $$mdi:bluetooth-off$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -159,7 +159,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -174,7 +174,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
