@@ -93,14 +93,14 @@
         ifblock: ifblock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp I &kp F &kp LPAR &kp RPAR &kp RBKT &kp RBRC>;
+            bindings = <&kp I &kp F &kp LPAR &kp RPAR &kp LEFT_BRACE &kp RIGHT_BRACE>;
             label = "IFBLOCK";
         };
 
         widgetclass: widgetclass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp C &kp L &kp A &kp S &kp S &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp E &kp X &kp T &kp E &kp N &kp D &kp S &kp SPACE &kp LS(S) &kp T &kp A &kp T &kp E &kp L &kp E &kp S &kp S &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp RBKT &kp SPACE &kp C &kp O &kp N &kp S &kp T &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp LPAR &kp RPAR &kp SEMI &kp RBRC>;
+            bindings = <&kp C &kp L &kp A &kp S &kp S &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp E &kp X &kp T &kp E &kp N &kp D &kp S &kp SPACE &kp LS(S) &kp T &kp A &kp T &kp E &kp L &kp E &kp S &kp S &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp LEFT_BRACE &kp SPACE &kp C &kp O &kp N &kp S &kp T &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp LPAR &kp RPAR &kp SEMI &kp RBRC>;
             label = "WIDGETCLASS";
         };
     };
@@ -126,7 +126,7 @@
 &kp GRAVE   &kp N1       &kp N2        &kp N3                &kp N4                 &kp N5                                             &kp UP_ARROW                     &kp N6        &kp N7            &kp N8             &kp N9          &kp N0           &kp CARET
 &kp DOLLAR  &kp AT_SIGN  &kp PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION                    &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &kp EQUAL     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp MINUS       &kp PERCENT      &trans
 &fwdbckslh  &kp POUND    &kp ASTERISK  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND    &kp LG(PERIOD)                    &kp DOWN_ARROW                   &kp RS(PIPE)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDERSCORE  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL
-                                       &kp SQT               &trans                 &kp QUESTION                                                                        &kp COLON     &trans            &kp COMMA
+                                       &kp SQT               &trans                 &trans                                                                              &kp COLON     &trans            &kp COMMA
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -138,7 +138,7 @@
 &studio_unlock  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                           &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10         &trans
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp F11         &kp F12
 &bt BT_CLR_ALL  &sys_reset    &trans        &bootloader   &trans        &trans        &rgb_ug RGB_EFF                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK  &kp PAUSE_BREAK
-                                            &trans        &trans        &mkp MB4                                                                          &mkp MB5     &trans     &trans
+                                            &trans        &mkp MB4      &mkp MB5                                                                          &trans       &trans     &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;
