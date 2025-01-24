@@ -31,7 +31,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
 
-            label = "SHIFTCAPS";
+            label = "TD Shift CapsL";
             tapping-term-ms = <150>;
         };
 
@@ -41,13 +41,13 @@
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp BSLH>;
 
-            label = "FWDBCKSLH";
+            label = "FWD BCK Slash";
             tapping-term-ms = <150>;
         };
 
         holdtap: holdtap {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLDTAP";
+            label = "Hold Tap";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -60,17 +60,26 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp PERIOD>;
 
-            label = "DOTCOMMA";
+            label = "Dot and Comma";
             tapping-term-ms = <150>;
         };
 
         questionexcl: questionexcl {
             compatible = "zmk,behavior-tap-dance";
-            label = "QUESTIONEXCL";
+            label = "Question and Excl";
             #binding-cells = <0>;
             bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
 
             tapping-term-ms = <150>;
+        };
+
+        esctab: esctab {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Esc Tab";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESCAPE>;
+
+            tapping-term-ms = <200>;
         };
     };
 
@@ -103,10 +112,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC     &kp Q             &kp W  &kp E     &kp R             &kp T                               &kp PAGE_UP             &kp Y          &kp U                 &kp I     &kp O      &kp P             &holdtap 2 ENTER
-&kp TAB     &kp A             &kp S  &kp D     &kp F             &kp G                     &kp HOME  &kp LG(SPACE)  &kp END  &kp H          &kp J                 &kp K     &kp L      &kp SINGLE_QUOTE  &kp AT
-&shiftcaps  &kp LEFT_CONTROL  &kp Z  &kp X     &kp C             &kp V      &kp LA(TAB)              &kp PAGE_DOWN           &kp B          &kp N                 &kp M     &kp MINUS  &kp RIGHT_ALT     &kp RIGHT_SHIFT
-                                     &kp LGUI  &holdtap 1 SPACE  &dotcomma                                                   &questionexcl  &holdtap 3 BACKSPACE  &kp SEMI
+&esctab        &kp Q             &kp W  &kp E     &kp R             &kp T                               &kp PAGE_UP             &kp Y          &kp U                 &kp I     &kp O      &kp P             &holdtap 2 ENTER
+&kp LA(SPACE)  &kp A             &kp S  &kp D     &kp F             &kp G                     &kp HOME  &kp LG(SPACE)  &kp END  &kp H          &kp J                 &kp K     &kp L      &kp SINGLE_QUOTE  &kp AT
+&shiftcaps     &kp LEFT_CONTROL  &kp Z  &kp X     &kp C             &kp V      &kp LA(TAB)              &kp PAGE_DOWN           &kp B          &kp N                 &kp M     &kp MINUS  &kp RIGHT_ALT     &kp RIGHT_SHIFT
+                                        &kp LGUI  &holdtap 1 SPACE  &dotcomma                                                   &questionexcl  &holdtap 3 BACKSPACE  &kp SEMI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
