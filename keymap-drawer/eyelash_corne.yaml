@@ -43,8 +43,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - LGUI
-  - NUMSYM
   - '&SPCDOT'
+  - NUMSYM
   - '&rtnsemicol'
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-option$$
@@ -92,8 +92,8 @@ layers:
   - ^
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '''', s: '"'}
-  - {t: '$$mdi:apple-keyboard-shift$$', type: held}
-  - '?'
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '?', type: held}
   - ':'
   - $$mdi:apple-keyboard-shift$$
   - {t: ',', s: <}
