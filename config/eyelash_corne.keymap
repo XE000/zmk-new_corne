@@ -45,26 +45,6 @@
             tapping-term-ms = <150>;
         };
 
-        rtnsemicol: rtnsemicol {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp SEMICOLON>;
-
-            label = "RTNSEMICOL";
-            tapping-term-ms = <150>;
-        };
-
-        SPCDOT: SPCDOT {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp PERIOD>;
-
-            label = "SPCDOT";
-            tapping-term-ms = <150>;
-        };
-
         holdtap: holdtap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLDTAP";
@@ -72,6 +52,25 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <500>;
+        };
+
+        dotcomma: dotcomma {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp PERIOD>;
+
+            label = "DOTCOMMA";
+            tapping-term-ms = <150>;
+        };
+
+        questionexcl: questionexcl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUESTIONEXCL";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+
+            tapping-term-ms = <150>;
         };
     };
 
@@ -96,13 +95,6 @@
             bindings = <&kp I &kp F &kp LPAR &kp RPAR &kp LEFT_BRACE &kp RIGHT_BRACE>;
             label = "IFBLOCK";
         };
-
-        widgetclass: widgetclass {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp C &kp L &kp A &kp S &kp S &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp E &kp X &kp T &kp E &kp N &kp D &kp S &kp SPACE &kp LS(S) &kp T &kp A &kp T &kp E &kp L &kp E &kp S &kp S &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp LEFT_BRACE &kp SPACE &kp C &kp O &kp N &kp S &kp T &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp LPAR &kp RPAR &kp SEMI &kp RBRC>;
-            label = "WIDGETCLASS";
-        };
     };
 
     keymap {
@@ -111,10 +103,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC     &kp Q             &kp W  &kp E     &kp R          &kp T                                      &kp PAGE_UP             &kp Y             &kp U                 &kp I     &kp O      &kp P          &kp RET
-&kp TAB     &kp A             &kp S  &kp D     &kp F          &kp G                            &kp HOME  &kp LG(SPACE)  &kp END  &kp H             &kp J                 &kp K     &kp L      &kp SEMICOLON  &kp SINGLE_QUOTE
-&shiftcaps  &kp LEFT_CONTROL  &kp Z  &kp X     &kp C          &kp V             &kp LA(TAB)              &kp PAGE_DOWN           &kp B             &kp N                 &kp M     &kp COMMA  &kp PERIOD     &kp QUESTION
-                                     &kp LGUI  &kp BACKSPACE  &holdtap 1 SPACE                                                   &holdtap 2 SPACE  &holdtap 3 BACKSPACE  &kp RALT
+&kp ESC     &kp Q             &kp W  &kp E     &kp R             &kp T                               &kp PAGE_UP             &kp Y          &kp U                 &kp I     &kp O      &kp P             &holdtap 2 ENTER
+&kp TAB     &kp A             &kp S  &kp D     &kp F             &kp G                     &kp HOME  &kp LG(SPACE)  &kp END  &kp H          &kp J                 &kp K     &kp L      &kp SINGLE_QUOTE  &kp AT
+&shiftcaps  &kp LEFT_CONTROL  &kp Z  &kp X     &kp C             &kp V      &kp LA(TAB)              &kp PAGE_DOWN           &kp B          &kp N                 &kp M     &kp MINUS  &kp RIGHT_ALT     &kp RIGHT_SHIFT
+                                     &kp LGUI  &holdtap 1 SPACE  &dotcomma                                                   &questionexcl  &holdtap 3 BACKSPACE  &kp SEMI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -146,10 +138,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans                            &kp UP_ARROW                     &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &ifblock  &trans            &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &trans  &widgetclass  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                    &kp DOWN_ARROW                   &trans  &trans        &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans                                                             &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans    &trans                            &kp UP_ARROW                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &ifblock  &trans            &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans                    &kp DOWN_ARROW                   &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans                                                             &trans  &trans  &trans
             >;
 
             label = "macros";
