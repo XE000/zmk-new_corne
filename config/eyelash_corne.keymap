@@ -81,17 +81,17 @@
     };
 
     macros {
-        ifblk: ifblk {
+        ifblock: ifblock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp I &kp F &kp LPAR &kp RPAR &kp SPACE &kp RBKT &kp RET &kp RET &kp RBRC>;
-            label = "IFBLK";
+            bindings = <&none &kp I &kp F &kp LPAR &kp RPAR &kp RBKT &kp RBRC>;
+            label = "IFBLOCK";
         };
 
         widgetclass: widgetclass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp C &kp L &kp A &kp S &kp S &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp E &kp X &kp T &kp E &kp N &kp D &kp S &kp SPACE &kp LS(S) &kp T &kp A &kp T &kp E &kp L &kp E &kp S &kp S &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp RBKT &kp RET &kp RET &kp C &kp O &kp N &kp S &kp T &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp LPAR &kp RPAR &kp SEMI &kp RET &kp RET &kp AT &kp O &kp V &kp E &kp R &kp R &kp I &kp D &kp E &kp RET &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp B &kp U &kp I &kp L &kp D &kp LPAR &kp LS(B) &kp U &kp I &kp L &kp D &kp LS(C) &kp O &kp N &kp T &kp E &kp X &kp T &kp SPACE &kp C &kp O &kp N &kp T &kp E &kp X &kp T &kp RPAR &kp SPACE &kp RBKT &kp RET &kp T &kp H &kp R &kp O &kp W &kp SPACE &kp LS(U) &kp N &kp I &kp M &kp P &kp L &kp E &kp M &kp E &kp N &kp T &kp E &kp D &kp LS(E) &kp R &kp R &kp O &kp R &kp LPAR &kp RPAR &kp SEMI &kp RET &kp RBRC &kp RET &kp RBRC>;
+            bindings = <&none &kp C &kp L &kp A &kp S &kp S &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp E &kp X &kp T &kp E &kp N &kp D &kp S &kp SPACE &kp LS(S) &kp T &kp A &kp T &kp E &kp L &kp E &kp S &kp S &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp SPACE &kp RBKT &kp SPACE &kp C &kp O &kp N &kp S &kp T &kp SPACE &kp LS(M) &kp Y &kp LS(W) &kp I &kp D &kp G &kp E &kp T &kp LPAR &kp RPAR &kp SEMI &kp RBRC>;
             label = "WIDGETCLASS";
         };
     };
@@ -137,10 +137,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &kp UP_ARROW                     &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &ifblk  &trans            &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &trans  &widgetclass  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &kp DOWN_ARROW                   &trans  &trans        &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                                             &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans    &trans                            &kp UP_ARROW                     &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &ifblock  &trans            &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &trans  &widgetclass  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans                    &kp DOWN_ARROW                   &trans  &trans        &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans                                                             &trans  &trans        &trans
             >;
 
             label = "macros";
