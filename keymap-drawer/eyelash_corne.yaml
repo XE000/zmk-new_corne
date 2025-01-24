@@ -93,7 +93,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '?', type: held}
+  - {type: held}
   - ':'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: ',', s: <}
@@ -141,9 +141,9 @@ layers:
   - SCROLLLOCK
   - PAUSE BREAK
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB4'
-  - {t: '&mkp MB5', type: held}
+  - '&mkp MB5'
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   macros:
