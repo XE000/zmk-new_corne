@@ -43,10 +43,10 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
   - LGUI
-  - {t: '$$mdi:keyboard-space$$', h: NUMSYM}
   - '&dotcomma'
-  - '&questionexcl'
+  - {t: '$$mdi:keyboard-space$$', h: NUMSYM}
   - {t: '$$mdi:backspace$$', h: macros}
+  - '&questionexcl'
   - {t: ;, s: ':'}
   NUMSYM:
   - {t: '`', s: '~'}
@@ -92,8 +92,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - {t: '''', s: '"'}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - ':'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: ',', s: <}
@@ -192,6 +192,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
