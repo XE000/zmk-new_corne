@@ -45,7 +45,7 @@ layers:
   - LGUI
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:keyboard-space$$
-  - {t: '&bckspalt', h: 'Gui+$$mdi:backspace$$'}
+  - {t: '$$mdi:backspace$$', h: 'AltGr+$$mdi:backspace$$'}
   - '&dotcomma'
   - NUMSYM
   NUMSYM:
