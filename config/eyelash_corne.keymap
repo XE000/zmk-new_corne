@@ -81,6 +81,22 @@
 
             tapping-term-ms = <200>;
         };
+
+        bckspalt: bckspalt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BCKSPALT";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
+        };
+
+        backspace3: backspace3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BACKSPACE3";
+            bindings = <&kp>, <&bckspalt>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -112,10 +128,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&esctab        &kp Q             &kp W  &kp E     &kp R      &kp T                                      &kp PAGE_UP             &kp Y                 &kp U          &kp I     &kp O      &kp P             &holdtap 2 ENTER
-&kp LA(SPACE)  &kp A             &kp S  &kp D     &kp F      &kp G                            &kp HOME  &kp LC(SPACE)  &kp END  &kp H                 &kp J          &kp K     &kp L      &kp SINGLE_QUOTE  &kp AT
-&shiftcaps     &kp LEFT_CONTROL  &kp Z  &kp X     &kp C      &kp V             &kp LA(TAB)              &kp PAGE_DOWN           &kp B                 &kp N          &kp M     &kp MINUS  &kp RIGHT_ALT     &kp RIGHT_SHIFT
-                                        &kp LGUI  &dotcomma  &holdtap 1 SPACE                                                   &holdtap 3 BACKSPACE  &questionexcl  &kp SEMI
+&esctab           &kp Q          &kp W  &kp E     &kp R           &kp T                               &kp PAGE_UP             &kp Y                        &kp U      &kp I  &kp O      &kp P             &holdtap 2 ENTER
+&kp LA(SPACE)     &kp A          &kp S  &kp D     &kp F           &kp G                     &kp HOME  &kp LC(SPACE)  &kp END  &kp H                        &kp J      &kp K  &kp L      &kp SINGLE_QUOTE  &holdtap 3 EQUAL
+&kp LEFT_CONTROL  &questionexcl  &kp Z  &kp X     &kp C           &kp V      &kp LA(TAB)              &kp PAGE_DOWN           &kp B                        &kp N      &kp M  &kp MINUS  &kp SEMICOLON     &kp RIGHT_ALT
+                                        &kp LGUI  &kp LEFT_SHIFT  &kp SPACE                                                   &backspace3 LG(BACKSPACE) 0  &dotcomma  &mo 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -124,10 +140,10 @@
         layer_1 {
             display-name = "NUMSYM";
             bindings = <
-&kp GRAVE   &kp N1       &kp N2        &kp N3                &kp N4                 &kp N5                                             &kp UP_ARROW                     &kp N6        &kp N7            &kp N8             &kp N9          &kp N0           &kp CARET
-&kp DOLLAR  &kp AT_SIGN  &kp PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION                    &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &kp EQUAL     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp MINUS       &kp PERCENT      &trans
-&fwdbckslh  &kp POUND    &kp ASTERISK  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND    &kp LG(PERIOD)                    &kp DOWN_ARROW                   &kp RS(PIPE)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDERSCORE  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL
-                                       &kp SQT               &trans                 &trans                                                                              &kp COLON     &trans            &kp COMMA
+&kp GRAVE   &kp N1       &kp N2        &kp N3                &kp N4                 &kp N5                                                  &kp UP_ARROW                     &kp N6          &kp N7            &kp N8             &kp N9          &kp N0       &trans
+&kp DOLLAR  &kp AT_SIGN  &kp PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION                         &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &kp EQUAL       &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp MINUS       &kp PERCENT  &trans
+&trans      &kp POUND    &kp ASTERISK  &kp LESS_THAN         &kp GREATER_THAN       &kp AMPERSAND         &kp LG(PERIOD)                    &kp DOWN_ARROW                   &kp RS(PIPE)    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDERSCORE  &trans       &fwdbckslh
+                                       &trans                &trans                 &kp LEFT_PARENTHESIS                                                                     &kp LEFT_BRACE  &kp LEFT_BRACKET  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
