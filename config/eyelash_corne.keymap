@@ -25,16 +25,6 @@
 
 / {
     behaviors {
-        shiftcaps: shiftcaps {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-
-            label = "TD Shift CapsL";
-            tapping-term-ms = <150>;
-        };
-
         fwdbckslh: fwdbckslh {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -42,7 +32,7 @@
             bindings = <&kp FSLH>, <&kp BSLH>;
 
             label = "FWD BCK Slash";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <500>;
         };
 
         holdtap: holdtap {
@@ -61,7 +51,7 @@
             bindings = <&kp COMMA>, <&kp PERIOD>;
 
             label = "Dot and Comma";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <500>;
         };
 
         questionexcl: questionexcl {
@@ -70,7 +60,7 @@
             #binding-cells = <0>;
             bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <500>;
         };
 
         esctab: esctab {
@@ -79,7 +69,7 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp ESCAPE>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
         };
 
         holdtapkp: holdtapkp {
