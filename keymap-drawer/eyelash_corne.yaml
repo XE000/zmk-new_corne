@@ -6,7 +6,7 @@ layers:
   - E
   - R
   - T
-  - PgUp
+  - $$mdi:arrow-up-bold$$
   - Y
   - U
   - I
@@ -19,9 +19,9 @@ layers:
   - D
   - F
   - G
-  - HOME
+  - $$mdi:arrow-left-bold$$
   - Ctl+$$mdi:keyboard-space$$
-  - END
+  - $$mdi:arrow-right-bold$$
   - H
   - J
   - K
@@ -35,7 +35,7 @@ layers:
   - C
   - V
   - Alt+$$mdi:keyboard-tab$$
-  - PgDn
+  - $$mdi:arrow-down-bold$$
   - B
   - N
   - M
@@ -55,7 +55,7 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - $$mdi:arrow-up-bold$$
+  - PgUp
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -68,9 +68,9 @@ layers:
   - (
   - )
   - '!'
-  - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:arrow-right-bold$$
+  - HOME
+  - {t: '$$mdi:transfer$$', type: trans}
+  - END
   - {t: '=', s: +}
   - '{'
   - '}'
@@ -84,7 +84,7 @@ layers:
   - '>'
   - '&'
   - Gui+.
-  - $$mdi:arrow-down-bold$$
+  - PgDn
   - Sft+|
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
