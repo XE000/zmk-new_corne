@@ -103,6 +103,13 @@
             bindings = <&kp I &kp F &kp LPAR &kp RPAR &kp LEFT_BRACE &kp RIGHT_BRACE>;
             label = "IFBLOCK";
         };
+
+        ifelse: ifelse {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp I &kp F &kp LPAR &kp RPAR &kp RBKT &kp RBRC &kp E &kp L &kp S &kp E &kp RBKT &kp RBRC>;
+            label = "IFELSE";
+        };
     };
 
     keymap {
@@ -146,10 +153,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans                            &kp UP_ARROW                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &ifblock  &trans            &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                    &kp DOWN_ARROW                   &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans                                                             &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans                               &kp UP_ARROW                     &trans     &trans         &trans             &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &ifblock   &trans               &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &trans     &ifelse        &trans             &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans     &trans                    &kp DOWN_ARROW                   &trans     &trans         &trans             &trans  &trans  &trans
+                        &kp LG(X)  &kp LG(C)  &kp LG(V)                                                             &kp LG(Z)  &kp LS(LG(Z))  &kp LA(LS(LG(C)))
             >;
 
             label = "macros";
